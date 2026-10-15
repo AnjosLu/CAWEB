@@ -4,7 +4,7 @@ A small GitHub Actions workflow runs on every pushed commit, pull request, and m
 
 ## What it checks
 
-- Syntax of tracked PHP and plain JavaScript files (excluding vendor and node_modules).
+- Syntax of tracked PHP, CSS, and plain JavaScript files (excluding vendor and node_modules).
 - The current live French and English homepages on desktop and mobile.
 - Successful page responses, expected language, content presence, and common WordPress error messages.
 - Failed first-party assets, first-party JavaScript exceptions, and mobile menu opening/closing.
@@ -12,7 +12,7 @@ A small GitHub Actions workflow runs on every pushed commit, pull request, and m
 
 ## Current limitations
 
-The active WordPress theme has not been added to this repository. Until its source and any custom plugins are imported, the syntax job explicitly warns that no website code was checked. Keep PHP files in their original theme/plugin directory structure. The runner currently uses PHP 8.3; match this to the university server once its version is confirmed. JSX, TypeScript, CSS quality, and plugin compatibility need additional checks if the imported source requires them.
+The active WordPress theme has not been added to this repository. Until its source and any custom plugins are imported, the syntax job explicitly warns that no website code was checked. Keep PHP files in their original theme/plugin directory structure. The runner currently uses PHP 8.3; match this to the university server once its version is confirmed. JSX, TypeScript, CSS appearance, and plugin compatibility need additional checks if the imported source requires them.
 
 The browser job tests https://mastercaweb.unistra.fr/ as currently deployed. It does **not** deploy or test changes in a pull request. A successful run is not proof that a proposed theme change works. It uses public pages only, without login or form submission. The tests use four Chromium sessions and do not crawl the whole site. They cover representative homepage behavior, not every page, form, browser, or accessibility requirement.
 
